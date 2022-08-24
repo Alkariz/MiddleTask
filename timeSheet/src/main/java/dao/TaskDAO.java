@@ -6,7 +6,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name="tasks")
-public class Task {
+public class TaskDAO {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -15,24 +15,24 @@ public class Task {
 
     @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name = "project_id")
-    private Project project;
+    private ProjectDAO project;
 
     @Column(name = "task_name")
     private String taskName;
 
-    public Task(){
-        //
+    public TaskDAO(){
+        // Нужен для БД
     }
 
-    public Task(Project aProject) {
-        this.project=aProject;
+    public TaskDAO(ProjectDAO project) {
+        this.project=project;
     }
 
-    public Project getProject() {
+    public ProjectDAO getProject() {
         return project;
     }
 
-    public void setProject(Project project) {
+    public void setProject(ProjectDAO project) {
         this.project = project;
     }
 

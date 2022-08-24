@@ -6,7 +6,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name="Persons")
-public class Person {
+public class PersonDAO {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)

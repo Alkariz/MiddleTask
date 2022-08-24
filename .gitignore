@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+**/*.iml
+**/.*
+!/.gitignore
+/gradlew
+/gradlew.bat
+gradle/

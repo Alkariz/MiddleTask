@@ -37,8 +37,17 @@ project(':timeSheet') {
 
     dependencies{
         testImplementation("junit:junit")
-//        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+        implementation 'org.springframework.boot:spring-boot-starter'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        implementation group: 'org.springframework', name: 'spring-web', version: '5.3.22'
+
+
+        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
         implementation group: 'org.liquibase', name: 'liquibase-core', version: '4.15.0'
         implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+        implementation group: 'org.project-lombok', name: 'lombok', version: '1.18.22'
+        implementation group: 'org.hibernate', name: 'hibernate-core', version: '6.1.2.Final', ext: 'pom'
+        testImplementation group: 'com.h2database', name: 'h2', version: '2.1.214'
+
     }
 }

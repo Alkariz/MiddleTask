@@ -7,7 +7,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name="projects")
-public class Project {
+public class ProjectDAO {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -18,13 +18,13 @@ public class Project {
     private String projectName;
 
     @OneToMany(mappedBy="project")
-    private Set<Task> tasks;
+    private Set<TaskDAO> tasks;
 
-    public Set<Task> getTasks() {
+    public Set<TaskDAO> getTasks() {
         return tasks;
     }
 
-    public void setTasks(Set<Task> tasks) {
+    public void setTasks(Set<TaskDAO> tasks) {
         this.tasks = tasks;
     }
 
